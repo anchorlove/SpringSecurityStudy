@@ -148,6 +148,8 @@ UserDetailsService接口：加载用户特定数据的核心接口。里面定�
 UserDetails接口：提供核心用户信息。通过UserDetailsService根据用户名获取处理的用户信息要封装成UserDetails对象返回。然后将这些信息封装到Authentication对象中。
 
 
+**加入Redis**
+上面的流程中，用户登录之后，每一次访问都需要根据userid查数据库，这样效率比较低。因此，可以使用Redis，登录之后，以userid作为key，用户的信息作为value，存入Redis
 
 
 
